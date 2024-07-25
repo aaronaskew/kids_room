@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://cunpo1vw5yjh4"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_7fcgo"]
+[ext_resource type="Texture2D" uid="uid://d1ks7tevcwern" path="res://assets/renders/room.png" id="1_issuu"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_7fcgo")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Room" type="Sprite2D" parent="."]
+position = Vector2(-0.5, -0.500015)
+scale = Vector2(0.606771, 0.615741)
+texture = ExtResource("1_issuu")
+
+[node name="bed_area2d" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="bed_area2d"]
+polygon = PackedVector2Array(-7, -75, -6, -60, -62, 39, -270, -37, -275, -68, -211, -145)
+
+[node name="aquarium_area2d" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="aquarium_area2d"]
+polygon = PackedVector2Array(292, -33, 312, -75, 410, -45, 400, 0, 383, 37, 283, 6)
+
+[connection signal="input_event" from="bed_area2d" to="." method="_on_bed_area_2d_input_event"]
+[connection signal="input_event" from="aquarium_area2d" to="." method="_on_aquarium_area_2d_input_event"]
