@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_7fcgo"]
 [ext_resource type="Texture2D" uid="uid://d1ks7tevcwern" path="res://assets/renders/room.png" id="1_issuu"]
-[ext_resource type="AudioStream" uid="uid://b07nvj55o6hwp" path="res://assets/music/kids_room.mp3" id="3_3ul81"]
+[ext_resource type="AudioStream" uid="uid://25tbof6quqkb" path="res://assets/music/kids_room.mp3" id="3_3ul81"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_7fcgo")
